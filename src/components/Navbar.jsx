@@ -1,9 +1,9 @@
-import {Nav, Navbar} from 'react-bootstrap'
-import {FaHeart} from 'react-icons/fa'
+import { Nav, Navbar } from 'react-bootstrap'
+import { FaHeart } from 'react-icons/fa'
 import logoMain from '../resources/images/Logo.png'
-import { WiDaySunny, WiStrongWind } from 'weather-icons-react';
+import { WiDaySunny, WiStrongWind } from 'weather-icons-react'
 import { useState, useEffect } from 'react'
-import React, { Component } from 'react';
+import React from 'react'
 import '../App.css'
 
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY

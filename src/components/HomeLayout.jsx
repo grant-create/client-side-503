@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Card} from 'react-bootstrap'
+import { Button, Card } from 'react-bootstrap'
 import Hero from '../resources/images/Hero.png'
 import kb2 from '../resources/images/Kachemak_Bay_2.png'
 import iv1 from '../resources/images/Iao_Valley_1.png'
@@ -11,7 +11,7 @@ import mountainBiking from '../resources/images/Mountain_Biking_1.png'
 import birdWatching from '../resources/images/Bird_Watching_1.png'
 import backpacking from '../resources/images/Backpacking_1.png'
 import { useState } from 'react';
-import {Link, useHistory} from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import '../App.css'
 
 function HomeLayout(props) {
