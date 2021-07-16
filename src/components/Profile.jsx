@@ -3,18 +3,13 @@ import {Redirect, useParams, Link} from "react-router-dom"
 import axios from "axios"
 import Login from "./Login"
 import '../App.css'
-
 import {Button, Dropdown, Card} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import kb2 from '../resources/images/Kachemak_Bay_2.png'
 import {FaHeart} from 'react-icons/fa'
-
-// import {Button, Dropdown, Card} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaCommentsDollar } from "react-icons/fa"
 
 let API_KEY = process.env.REACT_APP_API_KEY
-
 
 export default function Profile(props) {
 
@@ -23,12 +18,8 @@ export default function Profile(props) {
         e.preventDefault()
         // console.log('add to faves')
         await axios.put(`http://localhost:3001/api-v1/users/park/${park}/delete`, {email : props.currentUser.email})
-       
       }}
     
-
-      
-
     // state is information from server
     const [message, setMessage] = useState([])
    console.log("😁",message)
