@@ -1,6 +1,5 @@
-
 import axios from 'axios' 
-
+import {Button} from 'react-bootstrap'
 import {
     BrowserRouter as Router,
     Switch,
@@ -8,28 +7,16 @@ import {
     Redirect, 
     useParams
   } from 'react-router-dom'
-  
   import {
     useState,
     useEffect
   } from 'react'
-
   import {Container, Row, Col, Image} from 'react-bootstrap'
+  import {FaHeart, FaTrash} from 'react-icons/fa'
 
   let API_KEY = process.env.REACT_APP_API_KEY
 
-  
 export default function Park(props) {
-
-
-  // await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/users/auth-locked`, {headers: authHeaders})
-  // .then((res) => {
-  //     console.log(res)
-
-  //     let ansArray = []
-  //     console.log(res.data.myFavs)
-  // })
-
 
     const [indvPark, setIndvPark] = useState(null)
 
@@ -49,9 +36,7 @@ export default function Park(props) {
     }
 
     const {id} = useParams()
-    
-    // console.log({id}.id)
-    // console.log(props.match.params.id)
+
     useEffect (() => {
         async function getState() {
           try{
@@ -117,14 +102,9 @@ export default function Park(props) {
           parkUrl = (
               <>
               <p>{indvPark.url}</p>
-              </>)
-     
-          
+              </>
+              )
         }
-
-     
-
-   
 
     return(
         <div>
@@ -143,8 +123,10 @@ export default function Park(props) {
               <form>
                 {/* <label>{parkCode}</label> */}
                 <input hidden type="text" value={parkCode}/>
-                <button onClick={(e) => handleSave(e)}>Add to favorites</button>
-                <button onClick={(e) => handleDelete(e)}>Delete from favorites</button>
+                <Button onClick={(e) => handleSave(e)} className="btn btn-primary btn-sm mb-2 mr-2"><FaHeart/> &nbsp; Add to Your Favorites</Button>
+                <Button onClick={(e) => handleDelete(e)} className="btn btn-primary btn-sm mb-2"><FaTrash/> &nbsp; Delete from Your Favorites</Button>
+                {/* <button onClick={(e) => handleSave(e)}>Add to favorites</button> */}
+                {/* <button onClick={(e) => handleDelete(e)}>Delete from favorites</button> */}
               </form>
 
               
