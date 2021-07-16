@@ -89,7 +89,7 @@ function HomeLayout(props) {
     <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray"}} src={iv1} />
       <Card.Body>
         <p>
-        Kalaupapa Historical Park<span className="font-weight-light font-italic"> &mdash; Kalaupapa, Hawaii</span> 
+        Kalaupapa Historical Park<span className="font-weight-light font-italic"> &mdash; Kalaupapa, HI</span> 
         </p>
         <Button variant="primary" size="sm" onClick={(e) => {e.preventDefault(); window.location.href='park/kala';}}>Visit Kalaupapa Historical Park</Button>
       </Card.Body>

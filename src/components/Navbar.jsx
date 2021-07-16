@@ -16,7 +16,7 @@ export default function Navigation(props) {
   const city = ['sitka', 'kalaupapa', 'jensen', 'patchogue']
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city[3]}&units=imperial&APPID=${API_KEY}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city[1]}&units=imperial&APPID=${API_KEY}`)
     .then(res => res.json())
     .then(result => {
       setWeather(result);
@@ -27,7 +27,6 @@ export default function Navigation(props) {
       console.log(err)
     })
   }, [])
-
 
 const Weather = () => {
   console.log(weather)
@@ -42,6 +41,7 @@ const Weather = () => {
         {Math.round(weather.main.temp)}&deg;F &nbsp;
         <WiStrongWind size={24} color='#ccc' />
         {weather.wind.speed}mph
+        {/* {weather.icon} */}
       </div>
     </div>
 
@@ -66,7 +66,7 @@ const Weather = () => {
       <Navbar bg="dark" variant="dark" >
         <Nav className="mr-auto justify-content-end">
           <Nav.Link href="/" style={{borderRight: '3px solid #454e56', paddingRight: '30px'}}><img src={logoMain} /></Nav.Link>
-          <Nav.Link style={{marginTop: '20px', paddingLeft: '30px'}} href="/login">Log in</Nav.Link><span style={{marginTop: '28px', paddingLeft: '10px', color: '#454e54'}}>|</span><Nav.Link style={{marginTop: '20px', paddingLeft: '20px'}} href="/register">Register</Nav.Link>
+          <Nav.Link style={{marginTop: '20px', paddingLeft: '30px', width: '95px'}} href="/login"> Log in </Nav.Link><span style={{marginTop: '28px', paddingLeft: '10px', color: '#454e54'}}>|</span><Nav.Link style={{marginTop: '20px', paddingLeft: '20px'}} href="/register">Register</Nav.Link>
         </Nav>
 
         {weather ? <Weather/> : ''}
