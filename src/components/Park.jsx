@@ -132,6 +132,7 @@ export default function Park(props) {
               
               {/* <p>United States of America / <span>{parkStates}</span> / <span>{parkfullName}</span></p> */}
               <h4 className="">Alerts & Conditions</h4>
+              <p>Current Weather: </p>
               <p>{parkWeatherInfo}</p>
               <h4>Description</h4>
               <p>{parkDescription}</p>

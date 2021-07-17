@@ -13,10 +13,17 @@ export default function Navigation(props) {
   // // weather function, include city, weather state, icon, degrees F
   const [weather, setWeather] = useState(null)
 
-  const city = ['sitka', 'kalaupapa', 'jensen', 'patchogue']
-
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city[0]}&units=imperial&APPID=${API_KEY}`)
+
+    const city = ['sitka', 'kalaupapa', 'jensen', 'patchogue']
+
+    // random num
+    function getRandom() {
+      let random = Math.floor(Math.random() * city.length)
+      return city[random]
+    }
+console.log(getRandom())
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${getRandom()}&units=imperial&APPID=${API_KEY}`)
     .then(res => res.json())
     .then(result => {
       setWeather(result);
@@ -29,7 +36,7 @@ export default function Navigation(props) {
   }, [])
 
 const Weather = () => {
-  console.log(weather)
+  // console.log(weather)
   return(
 
     <div className="d-flex text-right justify-content-end w-100 p-3">
@@ -37,11 +44,10 @@ const Weather = () => {
         
         {weather.name} weather: &nbsp;
         {weather.weather[0].description}  
-        <WiDaySunny size={24} color='#ccc' /> 
+        <img width="30px" style={{filter: 'grayscale(100%)'}} className="mb-1" src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
         {Math.round(weather.main.temp)}&deg;F &nbsp;
         <WiStrongWind size={24} color='#ccc' />
         {weather.wind.speed}mph
-        {/* {weather.icon} */}
       </div>
     </div>
 
