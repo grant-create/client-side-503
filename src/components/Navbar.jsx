@@ -40,7 +40,7 @@ const Weather = () => {
         
         {weather.name} weather: &nbsp;
         {weather.weather[0].description}  
-        <img width="30px" style={{filter: 'grayscale(75%)'}} className="mb-1" src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png alt="Park Hopper - Weather News"`} />
+        <img width="30px" style={{filter: 'grayscale(75%)'}} className="mb-1" src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}  alt="Park Hopper - Weather News" />
         {Math.round(weather.main.temp)}&deg;F &nbsp;
         <WiStrongWind size={24} color='#ccc' />
         {weather.wind.speed}mph
