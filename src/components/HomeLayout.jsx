@@ -11,16 +11,10 @@ import mountainBiking from '../resources/images/Mountain_Biking_1.png'
 import birdWatching from '../resources/images/Bird_Watching_1.png'
 import backpacking from '../resources/images/Backpacking_1.png'
 import { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../App.css'
 
 function HomeLayout(props) {
-
-  const history = useHistory()
-
-  function handleClick(path) {
-    history.push(path)
-  }
 
     const [search, setSearch] = useState("")
     
@@ -64,7 +58,7 @@ function HomeLayout(props) {
           <div className="row">
             {/* Card */}
             <Card style={{ width: '25%' }}>
-            <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray", overflow: 'hidden'}} src={kb2} />
+            <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray", overflow: 'hidden'}} src={kb2} alt="Park Hopper - Visit Sitka National Historical Park" />
             <Card.Body>
             <p>
             Sitka National Historical Park
@@ -76,7 +70,7 @@ function HomeLayout(props) {
           {/* Card end */}
           {/* Card */}
           <Card style={{ width: '25%' }}>
-          <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray"}} src={iv1} />
+          <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray"}} src={iv1} alt="Park Hopper - Visit Kalaupapa Historical Park" />
             <Card.Body>
               <p>
               Kalaupapa Historical Park<span className="font-weight-light font-italic"> &mdash; Kalaupapa, HI</span> 
@@ -87,7 +81,7 @@ function HomeLayout(props) {
           {/* Card end */}
           {/* Card */}
             <Card style={{ width: '25%' }}>
-              <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray"}} src={ec1} />
+              <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray"}} src={ec1} alt="Park Hopper - Visit Dinosaur National Monument" />
               <Card.Body className="mb-2">
               <p>
               Dinosaur National Monument<span className="font-weight-light font-italic"> &mdash; Jensen, UT</span> 
@@ -99,7 +93,7 @@ function HomeLayout(props) {
           
           {/* Card */}
           <Card style={{ width: '25%' }}>
-            <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray"}} src={nf1} />
+            <img height="150px" variant="top" className="rounded" style={{borderRadius: '35px', boxShadow: "5px 5px 5px lightgray"}} src={nf1} alt="Visit Fire Island National Park" />
             <Card.Body>
               <p>
               Fire Island National<span className="font-weight-light font-italic"> &mdash; Patchogue, NY</span> 
@@ -115,31 +109,31 @@ function HomeLayout(props) {
         <div className="row mt-4">
         <div className="col-sm text-center link-primary">
           <a href="/activities/Hiking">
-          <img src={hiking} width="150" height="150" className="rounded-circle" />
+          <img src={hiking} width="150" height="150" className="rounded-circle"  alt="Park Hopper - Hiking"/>
           <p className="pt-3">Hiking</p> 
           </a>
         </div>
         <div className="col-sm text-center">
           <a href="/activities/Fishing">
-          <img src={fishing} width="150" height="150" className="rounded-circle" />
+          <img src={fishing} width="150" height="150" className="rounded-circle"  alt="Park Hopper - Fishing"/>
           <p className="pt-3">Fishing</p>
           </a>
         </div>
         <div className="col-sm text-center">
           <a className="activities" href="/activities/Mountain%20Biking">
-          <img src={mountainBiking} width="150" height="150" className="rounded-circle" />
+          <img src={mountainBiking} width="150" height="150" className="rounded-circle"  alt="Park Hopper - Backpacking"  alt="Park Hopper - Mountain Biking"/>
           <p className="pt-3">Mountain Biking</p>
           </a>
         </div>
         <div className="col-sm text-center">
           <a href="/activities/Birdwatching">
-          <img src={birdWatching} width="150" height="150" className="rounded-circle" />
+          <img src={birdWatching} width="150" height="150" className="rounded-circle"  alt="Park Hopper - Birdwatching" />
           <p className="pt-3">Bird Watching</p>
           </a>
         </div>
         <div className="col-sm text-center">
         <a href="/activities/Backpacking">
-          <img src={backpacking} width="150" height="150" className="rounded-circle" />
+          <img src={backpacking} width="150" height="150" className="rounded-circle" alt="Park Hopper - Backpacking" />
           <p className="pt-3">Backpacking</p>
           </a>
         </div>
