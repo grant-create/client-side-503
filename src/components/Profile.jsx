@@ -130,7 +130,9 @@ export default function Profile(props) {
                                 
                                 
                                                      <div className="mt-3 mb-3">
+                                                     <Link>
                                                      <Button onClick={() => handleDelete(lm.code)} className="btn btn-primary btn-sm mb-2"  ><FaHeart/> &nbsp; Remove {lm.fullName} From Your Favorites</Button> 
+                                                     </Link>
                             
                                                      </div>
                                                  </>
