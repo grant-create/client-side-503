@@ -55,7 +55,9 @@ const Weather = () => {
       <Navbar bg="dark" variant="dark">    
         <Nav>
           <Link className="nav-link" to="/" style={{borderRight: '3px solid #454e56', paddingRight: '30px'}}><img src={logoMain} /></Link>
-          <Link className="nav-link" style={{marginTop: '20px', paddingLeft: '30px'}} to="/profile"><FaHeart/></Link><div style={{marginTop: '28px', paddingLeft: '20px', color: '#454e54'}}>|</div><Link className="nav-link" style={{marginTop: '20px', paddingLeft: '30px'}} to="/"><span onClick={props.handleLogout}>Logout</span></Link>
+          <Link className="nav-link" style={{marginTop: '20px', paddingLeft: '30px'}} to="/profile"><FaHeart/></Link>
+          <div style={{marginTop: '28px', paddingLeft: '20px', color: '#454e54'}}>|</div>
+          <Link className="nav-link" style={{marginTop: '20px', paddingLeft: '30px'}} to="/"><span onClick={props.handleLogout}>Logout</span></Link>
         </Nav>
         {weather ? <Weather/> : ''}
       </Navbar>
